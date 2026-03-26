@@ -10,7 +10,7 @@
             --primary: #0062ff;
             --secondary: #00d2ff;
             --dark: #1a1a1a;
-            --accent: #28a745;
+            --accent: #25d366; /* Color WhatsApp */
             --light: #f8f9fa;
         }
 
@@ -31,7 +31,7 @@
 
         /* Pricing Badge */
         .price-tag {
-            background: var(--accent);
+            background: #e63946;
             display: inline-block;
             padding: 10px 25px;
             border-radius: 50px;
@@ -41,7 +41,7 @@
             margin-bottom: 20px;
         }
 
-        /* Grid */
+        /* Grid general */
         .container { max-width: 1100px; margin: auto; padding: 60px 20px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
 
@@ -56,13 +56,38 @@
         .card:hover { transform: translateY(-10px); }
         .card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.4rem; }
 
+        /* NUEVA SECCIÓN: CÓMO FUNCIONA (Timeline) */
+        .how-it-works {
+            background: var(--light);
+            border-radius: 20px;
+            padding: 50px;
+            margin-top: 50px;
+        }
+        .how-it-works h2 { text-align: center; color: var(--primary); font-weight: 800; margin-bottom: 40px; }
+        
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+        .timeline-item { padding: 20px; }
+        .timeline-icon {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        .timeline-item h4 { font-weight: 700; margin-bottom: 10px; }
+        .timeline-item p { font-size: 0.95rem; color: #555; }
+
         /* Hosting Section */
         .hosting-info {
-            background: var(--light);
+            background: white;
             padding: 40px;
             border-radius: 20px;
             margin-top: 40px;
             border-left: 5px solid var(--primary);
+            border: 1px solid #eee;
         }
 
         /* Buttons */
@@ -76,14 +101,16 @@
             font-weight: bold;
             transition: all 0.3s;
             margin: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
-        .btn-whatsapp { background: #25d366; }
+        .btn-whatsapp { background: var(--accent); }
         .btn:hover { opacity: 0.9; transform: scale(1.05); }
 
         footer { text-align: center; padding: 40px; color: #888; font-size: 0.9rem; }
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
+            .timeline-grid { grid-template-columns: 1fr; gap: 40px; }
         }
     </style>
 </head>
@@ -91,10 +118,14 @@
 
     <section class="hero">
         <h1>Tu negocio merece vender más</h1>
-        <p>Diseño webs profesionales para comercios que buscan resultados, no solo una imagen bonita.</p>
+        <p>Diseño webs profesionales para comercios locales que buscan resultados reales.</p>
         <div class="price-tag">Oferta Lanzamiento: 200€</div>
         <br>
-        <a href="https://wa.me/TUNUMERO" class="btn btn-whatsapp">Contactar por WhatsApp</a>
+        <a href="https://wa.me/34647750252?text=Hola%20Aiden,%20he%20visto%20tu%20web%20y%20me%20gustaría%20información%20sobre%20la%20oferta%20de%20200€" 
+           class="btn btn-whatsapp" 
+           target="_blank">
+           💬 Contactar por WhatsApp
+        </a>
     </section>
 
     <div class="container">
@@ -109,20 +140,41 @@
             </div>
             <div class="card">
                 <h3>Diseño Premium</h3>
-                <p>Webs rápidas, modernas y adaptadas 100% a teléfonos móviles.</p>
+                <p>Webs ultra rápidas, modernas y adaptadas 100% a teléfonos móviles.</p>
+            </div>
+        </div>
+
+        <div class="how-it-works">
+            <h2>✅ ¿Cómo funciona? Tu web en 3 pasos simples</h2>
+            <div class="timeline-grid">
+                <div class="timeline-item">
+                    <div class="timeline-icon">🤝</div>
+                    <h4>1. Reunión Rápida</h4>
+                    <p>Hablamos 15 min (café o videollamada) para entender tu negocio y lo que necesitas.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">🚀</div>
+                    <h4>2. Diseño y Desarrollo</h4>
+                    <p>Creo tu web profesional, rápida y optimizada para Google, lista en tiempo récord.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">👍</div>
+                    <h4>3. Lanzamiento y Pago</h4>
+                    <p>Revisas la web. Si te gusta, hacemos el pago y la publicamos al mundo. ¡Sin letra pequeña!</p>
+                </div>
             </div>
         </div>
 
         <div class="hosting-info">
             <h3>Sobre el mantenimiento y alojamiento</h3>
-            <p>Para que tu web esté siempre online, trabajo con los mejores servidores. <strong>Yo te regalo el primer mes de gestión y hosting.</strong></p>
-            <p style="margin-top: 10px; font-size: 0.9rem; color: #555;">*A partir del segundo mes, el coste del servidor corre por cuenta de tu empresa (aprox. 5-10€/mes), asegurando que tú seas el dueño total de tu web.</p>
+            <p>Para que tu web esté siempre online, trabajo con servidores de alta velocidad. <strong>Yo gestiono todo y te regalo el primer mes de hosting.</strong></p>
+            <p style="margin-top: 10px; font-size: 0.9rem; color: #555;">*A partir del segundo mes, el coste del servidor corre por cuenta de tu empresa (pago directo al proveedor), asegurando que tú seas el dueño legal de tu sitio.</p>
         </div>
     </div>
 
     <footer>
-        <p>Aiden Portillo — Especialista en Digitalización de Comercios</p>
-        <p>© 2026 Todos los derechos reservados.</p>
+        <p>Aiden Portillo — Desarrollador Web para Negocios Locales</p>
+        <p>© 2026 Santander, España.</p>
     </footer>
 
 </body>
