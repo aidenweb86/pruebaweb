@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aiden Portillo | Tu Web Pro</title>
+    <title>Aiden Portillo | Tu Web Pro sin Cuotas</title>
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
     
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #030712;
-            --card-bg: #111827;
-            --primary: #00f2ff;
-            --secondary: #7000ff;
-            --accent: #22c55e;
-            --text: #f9fafb;
+            --bg: #020617;
+            --card-bg: #0f172a;
+            --primary: #22d3ee; /* Cian eléctrico */
+            --secondary: #818cf8;
+            --accent: #10b981;
+            --text: #f8fafc;
+            --danger: #ef4444;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -25,196 +26,158 @@
             background-color: var(--bg); 
             color: var(--text); 
             line-height: 1.6;
-            overflow-x: hidden;
+            font-size: 1.1rem;
         }
 
-        /* Hero Section Estilo "Glass" */
+        /* Botón Flotante WhatsApp */
+        .floating-wa {
+            position: fixed; bottom: 25px; right: 25px;
+            background: #25d366; color: white; width: 65px; height: 65px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); z-index: 1000;
+            text-decoration: none; transition: 0.3s;
+        }
+        .floating-wa:hover { transform: scale(1.1); }
+
+        /* Hero Moderno */
         .hero {
-            position: relative;
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 80px 20px;
-            background-image: radial-gradient(circle at top right, rgba(112, 0, 255, 0.15), transparent),
-                              radial-gradient(circle at bottom left, rgba(0, 242, 255, 0.1), transparent);
-        }
-
-        .hero-container {
-            max-width: 1200px;
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .hero-text { text-align: left; }
-
-        .badge-promo {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 8px 16px;
-            border-radius: 100px;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-            color: var(--primary);
+            padding: 120px 20px;
+            text-align: center;
+            background: radial-gradient(circle at top, rgba(34, 211, 238, 0.1), transparent);
         }
 
         .hero h1 { 
-            font-size: 4rem; 
-            font-weight: 800; 
-            line-height: 1.1; 
-            margin-bottom: 20px;
-            background: linear-gradient(to right, #fff, var(--primary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 4.5rem; font-weight: 800; line-height: 1; margin-bottom: 25px;
+            letter-spacing: -2px;
         }
 
-        .hero p { font-size: 1.25rem; color: #9ca3af; margin-bottom: 35px; max-width: 500px; }
+        .hero h1 span { color: var(--primary); }
 
-        /* Imagen Sorpresa */
-        .hero-image {
-            position: relative;
-            border-radius: 30px;
-            overflow: hidden;
-            box-shadow: 0 0 50px rgba(0, 242, 255, 0.2);
-        }
-        .hero-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            filter: grayscale(20%) contrast(110%);
+        .price-hero {
+            background: var(--danger);
+            padding: 15px 30px;
+            border-radius: 15px;
+            font-size: 2.5rem;
+            font-weight: 900;
+            display: inline-block;
+            transform: rotate(-2deg);
+            margin-bottom: 30px;
+            box-shadow: 0 15px 30px rgba(239, 68, 68, 0.3);
         }
 
-        .price-float {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: #ef4444;
-            padding: 15px 25px;
-            border-radius: 20px;
-            font-weight: 800;
-            font-size: 1.8rem;
-            transform: rotate(5deg);
-            box-shadow: 0 10px 20px rgba(239, 68, 68, 0.4);
-        }
+        /* Grid de Secciones */
+        .container { max-width: 1100px; margin: auto; padding: 60px 20px; }
 
-        /* Botón estilo "Cyber" */
-        .btn-main {
-            background: var(--primary);
-            color: var(--bg);
-            padding: 18px 40px;
-            border-radius: 14px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 1.1rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            transition: 0.3s;
-            box-shadow: 0 0 20px rgba(0, 242, 255, 0.3);
-        }
-        .btn-main:hover { transform: translateY(-3px); box-shadow: 0 0 35px rgba(0, 242, 255, 0.5); }
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
 
-        /* Contenido inferior */
-        .section-padding { padding: 100px 20px; max-width: 1200px; margin: auto; }
-        
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .feat-card {
+        .card {
             background: var(--card-bg);
             padding: 40px;
             border-radius: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255,255,255,0.05);
             transition: 0.3s;
         }
-        .feat-card:hover { border-color: var(--primary); background: rgba(255,255,255,0.02); }
-        .feat-card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.5rem; }
+        .card:hover { border-color: var(--primary); transform: translateY(-5px); }
+        .card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.6rem; }
 
-        .trust-banner {
-            background: linear-gradient(90deg, transparent, rgba(0, 242, 255, 0.05), transparent);
-            padding: 40px;
-            text-align: center;
+        /* SECCIÓN BOMBA: HOSTING GRATIS */
+        .free-hosting-box {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            border: 2px solid var(--accent);
+            padding: 50px;
             border-radius: 30px;
-            margin: 60px 0;
+            margin: 80px 0;
+            text-align: center;
         }
+        .free-hosting-box h2 { color: var(--accent); font-size: 2.5rem; margin-bottom: 20px; }
+        .save-badge { background: #064e3b; color: #34d399; padding: 5px 15px; border-radius: 10px; font-weight: 800; }
 
-        footer { text-align: center; padding: 50px; color: #4b5563; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05); }
+        /* Botón Acción */
+        .btn-cta {
+            background: var(--primary);
+            color: var(--bg);
+            padding: 20px 45px;
+            border-radius: 15px;
+            font-weight: 800;
+            text-decoration: none;
+            font-size: 1.3rem;
+            display: inline-block;
+            margin-top: 20px;
+            box-shadow: 0 10px 25px rgba(34, 211, 238, 0.2);
+            transition: 0.3s;
+        }
+        .btn-cta:hover { transform: scale(1.05); box-shadow: 0 15px 35px rgba(34, 211, 238, 0.4); }
 
-        @media (max-width: 900px) {
-            .hero-container { grid-template-columns: 1fr; text-align: center; }
-            .hero-text { order: 2; }
-            .hero-image { order: 1; max-width: 400px; margin: auto; }
+        footer { text-align: center; padding: 60px; color: #475569; font-size: 0.95rem; border-top: 1px solid rgba(255,255,255,0.05); }
+
+        @media (max-width: 768px) {
             .hero h1 { font-size: 2.8rem; }
-            .hero p { margin: 0 auto 30px; }
+            .free-hosting-box { padding: 30px; }
+            .free-hosting-box h2 { font-size: 1.8rem; }
         }
     </style>
 </head>
 <body>
 
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-text">
-                <div class="badge-promo">
-                    <span>⚡ Solo 2 plazas libres para Abril</span>
-                </div>
-                <h1>Tu negocio online en 48 horas.</h1>
-                <p>Diseño web de alto impacto para comercios locales. Sin llamadas, sin esperas, gestión 100% por WhatsApp.</p>
-                
-                <a href="https://wa.me/34647750252?text=Hola%20Aiden,%20quiero%20aprovechar%20la%20oferta%20de%20200€" class="btn-main">
-                    🚀 EMPEZAR PROYECTO
-                </a>
-                
-                <p style="margin-top: 20px; font-size: 0.9rem; color: #64748b;">
-                    ✓ Si no te gusta el diseño final, <strong>no pagas nada.</strong>
-                </p>
-            </div>
+    <a href="https://wa.me/34647750252?text=Hola%20Aiden,%20quiero%20la%20web%20con%20hosting%20gratis" class="floating-wa" target="_blank">💬</a>
 
-            <div class="hero-image">
-                <div class="price-float">200€</div>
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop" alt="Diseño Web Profesional">
-            </div>
-        </div>
-    </section>
+    <header class="hero">
+        <h1>Tu negocio online <br><span>en 48 horas.</span></h1>
+        <div class="price-hero">200€</div>
+        <p style="color: #94a3b8; font-size: 1.3rem; max-width: 650px; margin: 0 auto 40px;">
+            Diseño web profesional, ultra-rápido y optimizado para Google. Sin cuotas mensuales y sin letra pequeña.
+        </p>
+        <a href="https://wa.me/34647750252?text=Hola%20Aiden,%20quiero%20la%20web%20con%20hosting%20gratis" class="btn-cta">
+            🚀 QUIERO EMPEZAR YA
+        </a>
+        <p style="margin-top: 20px; font-size: 0.9rem; color: #475569;">✓ Garantía: Si no te gusta el diseño, no pagas nada.</p>
+    </header>
 
-    <div class="section-padding">
-        <div class="features">
-            <div class="feat-card">
+    <div class="container">
+        
+        <div class="card-grid">
+            <div class="card">
                 <h3>Ventas 24/7</h3>
-                <p>Tu negocio no cierra. Recibe consultas y pedidos mientras duermes con una web optimizada.</p>
+                <p>Tu escaparate abierto al mundo. Recibe consultas de clientes incluso cuando tu tienda esté cerrada.</p>
             </div>
-            <div class="feat-card">
-                <h3>Google Maps Pro</h3>
-                <p>Aparece en los primeros resultados cuando alguien busque tus servicios en tu zona.</p>
+            <div class="card">
+                <h3>Google Local</h3>
+                <p>Aparece en Google Maps cuando alguien busque tus servicios en tu zona. Visibilidad total.</p>
             </div>
-            <div class="feat-card">
+            <div class="card">
                 <h3>Propiedad Total</h3>
-                <p>Sin cuotas mensuales infinitas. Tú eres el dueño legal de tu web y de tu dominio.</p>
+                <p>Tú eres el dueño legal de tu web. Olvídate de agencias que "secuestran" tu dominio.</p>
             </div>
         </div>
 
-        <div class="trust-banner">
-            <h2 style="font-size: 2rem; margin-bottom: 20px;">Proceso 100% Digital</h2>
-            <p>Hablamos 15 min por chat, me pasas tu info y en 48h tienes tu borrador. <strong>Así de simple.</strong></p>
+        <div class="free-hosting-box">
+            <span class="save-badge">Ahorro de +240€/año</span>
+            <h2>🎁 Opción: Hosting GRATIS para siempre</h2>
+            <p style="font-size: 1.2rem; margin: 20px 0; color: #cbd5e1;">
+                Uso tecnología de última generación para alojar tu web en servidores de alto rendimiento <strong>sin que tengas que pagar una cuota mensual.</strong>
+            </p>
+            <p style="font-size: 1rem; color: #94a3b8;">
+                Mientras otras agencias te cobran 20€/mes solo por "mantenimiento", conmigo tu único gasto será tu dominio (aprox. 1€ al mes).
+            </p>
         </div>
 
-        <div style="text-align: center;">
-            <a href="https://wa.me/34647750252?text=Hola%20Aiden,%20quiero%20aprovechar%20la%20oferta%20de%20200€" style="color: var(--primary); text-decoration: none; font-weight: 800; font-size: 1.5rem;">
-                💬 HAZ CLICK AQUÍ PARA HABLAR CONMIGO
+        <div style="text-align: center; background: rgba(34, 211, 238, 0.03); padding: 60px; border-radius: 30px;">
+            <h2 style="margin-bottom: 30px;">¿Cómo es el proceso?</h2>
+            <div style="text-align: left; max-width: 600px; margin: auto;">
+                <p style="margin-bottom: 20px;">✅ <strong>Paso 1:</strong> Hablamos 15 min por WhatsApp (sin llamadas).</p>
+                <p style="margin-bottom: 20px;">✅ <strong>Paso 2:</strong> Me pasas tu logo e info y diseño tu web en 48h.</p>
+                <p style="margin-bottom: 20px;">✅ <strong>Paso 3:</strong> Si te encanta, pagas los 200€ y lanzamos.</p>
+            </div>
+            <a href="https://wa.me/34647750252?text=Hola%20Aiden,%20quiero%20la%20web%20con%20hosting%20gratis" class="btn-cta">
+                💬 CONTACTAR POR CHAT
             </a>
         </div>
+
     </div>
 
     <footer>
-        <p>Aiden Portillo — Desarrollador de Estrategias Digitales</p>
-        <p>© 2026 Proyectos de Alta Velocidad.</p>
+        <p>Aiden Portillo — Desarrollador de Estrategias Digitales para Negocios Reales</p>
+        <p>© 2026 — Soporte técnico incluido en el primer mes.</p>
     </footer>
 
 </body>
