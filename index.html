@@ -3,218 +3,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aiden Portillo | Impulsa tu Negocio Local</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <title>Aiden Portillo | Tu Negocio en Internet Hoy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #0062ff;
             --secondary: #00d2ff;
-            --dark: #1a1a1a;
-            --accent: #25d366; /* Color WhatsApp */
-            --light: #f8f9fa;
+            --dark: #0f172a;
+            --accent: #25d366; 
+            --light: #f8fafc;
+            --danger: #ef4444;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        /* Aumento GLOBAL de fuente de 1.2rem (era 1rem) */
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--dark); background: white; font-size: 1.2rem; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.5; 
+            color: var(--dark); 
+            background: white; 
+            font-size: 1.3rem; /* Fuente base muy grande */
+        }
 
-        /* Hero Section GRANDE */
+        /* Hero Section IMPACTANTE */
         .hero {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
-            padding: 140px 30px; /* Más relleno */
+            padding: 160px 20px;
             text-align: center;
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 92%, 0% 100%);
         }
 
-        .hero h1 { font-size: 5rem; font-weight: 800; letter-spacing: -2px; margin-bottom: 30px; line-height: 1.1; } /* Título ENORME */
-        .hero p { font-size: 1.6rem; opacity: 0.95; max-width: 800px; margin: 0 auto 40px; } /* Párrafo más grande */
+        .hero h1 { 
+            font-size: 5.5rem; 
+            font-weight: 900; 
+            letter-spacing: -3px; 
+            margin-bottom: 30px; 
+            line-height: 1;
+            text-transform: uppercase;
+        }
 
-        /* Etiqueta de Precio GRANDE */
+        .hero p { 
+            font-size: 1.8rem; 
+            opacity: 0.95; 
+            max-width: 900px; 
+            margin: 0 auto 40px; 
+            font-weight: 400;
+        }
+
+        /* Precio y Urgencia */
+        .price-container { margin-bottom: 40px; }
         .price-tag {
-            background: #e63946;
+            background: var(--danger);
             display: inline-block;
-            padding: 15px 35px; /* Más relleno */
-            border-radius: 60px;
-            font-weight: bold;
-            font-size: 2rem; /* Precio más grande */
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-            margin-bottom: 30px;
+            padding: 20px 45px;
+            border-radius: 100px;
+            font-weight: 900;
+            font-size: 2.5rem;
+            box-shadow: 0 20px 40px rgba(239, 68, 68, 0.4);
+            transform: rotate(-2deg);
         }
 
-        /* Garantía de Venta */
-        .guarantee {
-            font-size: 1.1rem;
-            color: #ffcccc;
-            margin-top: -20px;
-            margin-bottom: 40px;
+        .urgency {
+            display: block;
+            margin-top: 20px;
+            font-weight: 700;
+            color: #ffde00;
+            font-size: 1.4rem;
+            text-transform: uppercase;
         }
 
-        /* Grid general GRANDE */
-        .container { max-width: 1300px; margin: auto; padding: 100px 30px; } /* Más ancho y relleno */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; } /* Tarjetas más anchas */
+        /* Secciones */
+        .container { max-width: 1200px; margin: auto; padding: 100px 25px; }
+        
+        h2 { font-size: 3.5rem; font-weight: 900; text-align: center; margin-bottom: 60px; letter-spacing: -1px; }
 
+        /* Tarjetas de Beneficios */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
         .card {
             background: white;
-            padding: 50px; /* Más relleno */
-            border-radius: 25px;
-            box-shadow: 0 20px 45px rgba(0,0,0,0.08);
-            border: 1px solid #eee;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.12); }
-        .card h3 { color: var(--primary); margin-bottom: 20px; font-size: 1.8rem; font-weight: 800; } /* Título de tarjeta más grande */
-        .card p { font-size: 1.25rem; }
-
-        /* Cómo Funciona (Timeline) GRANDE */
-        .how-it-works {
-            background: var(--light);
+            padding: 60px 40px;
             border-radius: 30px;
-            padding: 80px 50px; /* Más relleno */
-            margin-top: 80px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+            border: 1px solid #f1f5f9;
+            transition: 0.3s;
         }
-        .how-it-works h2 { text-align: center; color: var(--primary); font-weight: 800; margin-bottom: 60px; font-size: 2.8rem; }
-        
-        .timeline-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            text-align: center;
-        }
-        .timeline-item { padding: 30px; background: white; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.03); }
-        .timeline-icon {
-            font-size: 4.5rem; /* Iconos más grandes */
-            color: var(--secondary);
-            margin-bottom: 20px;
-        }
-        .timeline-item h4 { font-weight: 700; margin-bottom: 15px; font-size: 1.6rem; }
-        .timeline-item p { font-size: 1.15rem; color: #555; }
+        .card:hover { transform: translateY(-15px); border-color: var(--primary); }
+        .card h3 { font-size: 2rem; margin-bottom: 20px; color: var(--primary); font-weight: 800; }
 
-        /* NUEVA SECCIÓN: FAQ Corta */
-        .faq-section { margin-top: 80px; }
-        .faq-section h2 { text-align: center; color: var(--dark); font-weight: 800; margin-bottom: 50px; font-size: 2.5rem; }
-        .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .faq-item { background: white; padding: 30px; border-radius: 20px; border: 1px solid #eee; }
-        .faq-item h5 { font-weight: 700; margin-bottom: 10px; font-size: 1.2rem; color: var(--primary); }
-        .faq-item p { font-size: 1.1rem; color: #666; }
-
-        /* Hosting Section GRANDE */
-        .hosting-info {
-            background: white;
-            padding: 60px; /* Más relleno */
-            border-radius: 25px;
-            margin-top: 60px;
-            border-left: 10px solid var(--primary); /* Borde más grueso */
-            border: 1px solid #eee;
-            font-size: 1.25rem;
-        }
-        .hosting-info h3 { font-size: 1.8rem; margin-bottom: 20px; }
-
-        /* Botones GRANDES */
-        .btn {
-            display: inline-block;
+        /* Tabla Comparativa */
+        .compare-box {
             background: var(--dark);
             color: white;
-            padding: 22px 50px; /* Más relleno */
-            border-radius: 15px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.3rem; /* Botón más grande */
-            transition: all 0.3s;
-            margin: 15px;
-            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+            padding: 80px 40px;
+            border-radius: 40px;
+            margin: 100px 0;
         }
-        .btn-whatsapp { background: var(--accent); }
-        .btn:hover { opacity: 0.9; transform: scale(1.05); }
+        .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
+        .compare-item { padding: 30px; border-radius: 20px; background: rgba(255,255,255,0.05); }
+        .compare-item.highlight { background: var(--primary); }
+        .compare-item h4 { font-size: 1.8rem; margin-bottom: 15px; }
+        .compare-item ul { list-style: none; }
+        .compare-item li { margin-bottom: 10px; font-size: 1.2rem; }
 
-        footer { text-align: center; padding: 60px; color: #888; font-size: 1.1rem; border-top: 1px solid #eee; margin-top: 60px; }
+        /* Pasos (Timeline) */
+        .steps { background: var(--light); padding: 100px 20px; border-radius: 40px; }
+        .step-item { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 25px; 
+            margin-bottom: 30px; 
+            display: flex; 
+            align-items: center;
+            gap: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+        .step-num { 
+            background: var(--primary); 
+            color: white; 
+            width: 80px; 
+            height: 80px; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 2rem; 
+            font-weight: 900;
+            flex-shrink: 0;
+        }
 
+        /* Hosting y FAQ */
+        .info-block { margin-top: 80px; padding: 50px; border-radius: 30px; border: 2px dashed #cbd5e1; }
+
+        /* Botón WhatsApp */
+        .btn-wa {
+            background: var(--accent);
+            color: white;
+            padding: 25px 60px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.6rem;
+            display: inline-block;
+            box-shadow: 0 20px 40px rgba(37, 211, 102, 0.3);
+            transition: 0.3s;
+        }
+        .btn-wa:hover { transform: scale(1.05); filter: brightness(1.1); }
+
+        footer { text-align: center; padding: 80px 20px; color: #64748b; border-top: 1px solid #f1f5f9; }
+
+        /* Responsive */
         @media (max-width: 900px) {
-            .hero h1 { font-size: 3.2rem; }
-            .timeline-grid { grid-template-columns: 1fr; gap: 40px; }
+            .hero h1 { font-size: 3rem; }
             .hero p { font-size: 1.3rem; }
-            .price-tag { font-size: 1.6rem; }
+            .compare-grid { grid-template-columns: 1fr; }
+            .step-item { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
 <body>
 
     <section class="hero">
-        <h1>Tu negocio merece vender más</h1>
-        <p>Diseño webs profesionales y ultra rápidas para comercios locales de Santander que buscan resultados reales.</p>
-        <div class="price-tag">Oferta Lanzamiento: 200€</div>
-        <div class="guarantee">Si no te gusta el diseño final, no pagas nada.</div>
-        <br>
-        <a href="https://wa.me/34647750252?text=Hola%20Aiden,%20he%20visto%20tu%20web%20y%20me%20gustaría%20información%20sobre%20la%20oferta%20de%20200€" 
-           class="btn btn-whatsapp" 
-           target="_blank">
-           💬 Contactar por WhatsApp
+        <div class="price-container">
+            <div class="price-tag">OFERTA: 200€</div>
+            <span class="urgency">⚠️ Quedan 2 plazas este mes</span>
+        </div>
+        <h1>Tu negocio online en 48 horas</h1>
+        <p>Diseño webs de alto impacto que convierten visitas en clientes. Sin complicaciones, sin esperas y sin precios inflados.</p>
+        <a href="https://wa.me/34647750252?text=Hola%20Aiden,%20he%20visto%20tu%20web%20y%20quiero%20aprovechar%20la%20oferta%20de%20200€" class="btn-wa" target="_blank">
+            🚀 EMPEZAR AHORA POR WHATSAPP
         </a>
+        <p style="margin-top: 30px; font-size: 1.1rem; opacity: 0.8;">Garantía total: Si no te gusta el diseño, no pagas nada.</p>
     </section>
 
     <div class="container">
+        
+        <h2>¿Por qué tu negocio necesita esto?</h2>
         <div class="grid">
             <div class="card">
-                <h3>Ventas 24/7</h3>
-                <p>Tu negocio nunca cierra. Muestra tus productos y servicios a cualquier hora del día, captando clientes mientras duermes.</p>
+                <h3>Ventas en Automático</h3>
+                <p>Tu negocio estará abierto las 24 horas del día. Deja que tus clientes te encuentren y te contacten incluso mientras duermes.</p>
             </div>
             <div class="card">
-                <h3>Google Maps & SEO</h3>
-                <p>Aparece cuando los clientes busquen lo que tú vendes en tu zona. Visibilidad total para que te encuentren antes que a la competencia.</p>
+                <h3>Google es el nuevo escaparate</h3>
+                <p>Si no estás en Google, no existes. Te posiciono para que los vecinos de tu zona te encuentren antes que a nadie.</p>
             </div>
             <div class="card">
-                <h3>Diseño Premium</h3>
-                <p>Webs ultra rápidas, modernas y adaptadas 100% a teléfonos móviles. Transmite confianza y profesionalidad desde el primer segundo.</p>
+                <h3>Confianza Instantánea</h3>
+                <p>Una web moderna y profesional le dice al cliente que eres serio y de confianza. La primera impresión lo es todo.</p>
             </div>
         </div>
 
-        <div class="how-it-works">
-            <h2>✅ Tu web en 3 pasos simples (No te quitará tiempo)</h2>
-            <div class="timeline-grid">
-                <div class="timeline-item">
-                    <div class="timeline-icon">🤝</div>
-                    <h4>1. Reunión Rápida</h4>
-                    <p>Hablamos 15 min (solo por chat) para entender tu negocio y lo que necesitas. Sin llamadas molestas.</p>
+        <div class="compare-box">
+            <h2>Mi diferencia</h2>
+            <div class="compare-grid">
+                <div class="compare-item">
+                    <h4>Agencias Normales</h4>
+                    <ul>
+                        <li>❌ Presupuestos de +1.000€</li>
+                        <li>❌ Entrega en 30-60 días</li>
+                        <li>❌ Facturas de mantenimiento altas</li>
+                        <li>❌ Reuniones largas y aburridas</li>
+                    </ul>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-icon">🚀</div>
-                    <h4>2. Diseño y Desarrollo</h4>
-                    <p>Creo tu web profesional y optimizada para Google, lista en tiempo récord (48h).</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-icon">👍</div>
-                    <h4>3. Lanzamiento</h4>
-                    <p>Revisas la web. Si estás 100% satisfecho, hacemos el pago y la publicamos al mundo.</p>
+                <div class="compare-item highlight">
+                    <h4>Con Aiden Portillo</h4>
+                    <ul>
+                        <li>✅ Solo 200€ (Pago único)</li>
+                        <li>✅ Entrega en 48 Horas</li>
+                        <li>✅ 100% Gestión por Chat (Sin llamadas)</li>
+                        <li>✅ Tú eres el dueño total de la web</li>
+                    </ul>
                 </div>
             </div>
         </div>
 
-        <div class="hosting-info">
-            <h3>Sobre el mantenimiento y alojamiento</h3>
-            <p>Para que tu web esté siempre online, trabajo con servidores de alta velocidad. <strong>Yo gestiono todo el aspecto técnico y te regalo el primer mes de hosting.</strong></p>
-            <p style="margin-top: 15px; font-size: 1rem; color: #666;">*A partir del segundo mes, el coste del servidor corre por cuenta de tu empresa (pago directo al proveedor), asegurando que tú seas el dueño legal de tu sitio.</p>
-        </div>
-
-        <div class="faq-section">
-            <h2>🤔 Preguntas Frecuentes</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h5>¿Cuándo estará lista mi web?</h5>
-                    <p>En 48h desde que reciba tus textos e imágenes básicas. Trabajo rápido.</p>
-                </div>
-                <div class="faq-item">
-                    <h5>¿Tengo que saber de ordenadores?</h5>
-                    <p>No. Yo me encargo de todo lo técnico. Tú solo tienes que atender a tus nuevos clientes.</p>
+        <section class="steps">
+            <h2>3 Pasos para el éxito</h2>
+            <div class="step-item">
+                <div class="step-num">1</div>
+                <div>
+                    <h4>Hablamos 15 min por Chat</h4>
+                    <p>Me cuentas qué haces y qué necesitas. Sin llamadas, sin perder tiempo. Todo por WhatsApp.</p>
                 </div>
             </div>
+            <div class="step-item">
+                <div class="step-num">2</div>
+                <div>
+                    <h4>Diseño y Montaje</h4>
+                    <p>Me pongo manos a la obra y en 48 horas tienes tu web lista para revisar.</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-num">3</div>
+                <div>
+                    <h4>¡Al Aire!</h4>
+                    <p>Si te encanta el resultado, activamos el dominio y empiezas a recibir clientes.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="info-block">
+            <h3>Sobre el mantenimiento</h3>
+            <p><strong>Cero trampas:</strong> Yo te regalo el primer mes de alojamiento profesional. A partir del segundo mes, tú pagas el servidor (aprox. 5-10€/mes) directamente al proveedor para que la web sea 100% tuya y no dependas de nadie.</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 80px;">
+            <h2>¿Listo para dar el salto?</h2>
+            <a href="https://wa.me/34647750252?text=Hola%20Aiden,%20he%20visto%20tu%20web%20y%20quiero%20aprovechar%20la%20oferta%20de%20200€" class="btn-wa" target="_blank">
+                💬 SÍ, QUIERO MI WEB POR 200€
+            </a>
         </div>
 
     </div>
 
     <footer>
-        <p>Aiden Portillo — Desarrollador Web para Negocios Locales en Santander</p>
-        <p>© 2026 Todos los derechos reservados.</p>
+        <p>Aiden Portillo — Especialista en Digitalización de Negocios Locales</p>
+        <p>© 2026 — Soporte y Calidad Garantizada</p>
     </footer>
 
 </body>
