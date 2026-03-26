@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aiden Portillo | Tu Web Pro sin Cuotas</title>
+    <title>Aiden Portillo | Tu Web Profesional</title>
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
     
@@ -12,7 +12,7 @@
         :root {
             --bg: #020617;
             --card-bg: #0f172a;
-            --primary: #22d3ee; /* Cian eléctrico */
+            --primary: #22d3ee;
             --secondary: #818cf8;
             --accent: #10b981;
             --text: #f8fafc;
@@ -20,16 +20,8 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body { 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
-            background-color: var(--bg); 
-            color: var(--text); 
-            line-height: 1.6;
-            font-size: 1.1rem;
-        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.5; font-size: 1.1rem; }
 
-        /* Botón Flotante WhatsApp */
         .floating-wa {
             position: fixed; bottom: 25px; right: 25px;
             background: #25d366; color: white; width: 65px; height: 65px;
@@ -37,147 +29,169 @@
             font-size: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); z-index: 1000;
             text-decoration: none; transition: 0.3s;
         }
-        .floating-wa:hover { transform: scale(1.1); }
 
-        /* Hero Moderno */
         .hero {
-            padding: 120px 20px;
+            padding: 100px 20px;
             text-align: center;
             background: radial-gradient(circle at top, rgba(34, 211, 238, 0.1), transparent);
         }
 
-        .hero h1 { 
-            font-size: 4.5rem; font-weight: 800; line-height: 1; margin-bottom: 25px;
-            letter-spacing: -2px;
-        }
-
+        .hero h1 { font-size: 4.2rem; font-weight: 800; line-height: 1.1; margin-bottom: 25px; letter-spacing: -2px; }
         .hero h1 span { color: var(--primary); }
 
         .price-hero {
             background: var(--danger);
-            padding: 15px 30px;
+            padding: 12px 30px;
             border-radius: 15px;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 900;
             display: inline-block;
             transform: rotate(-2deg);
             margin-bottom: 30px;
-            box-shadow: 0 15px 30px rgba(239, 68, 68, 0.3);
         }
 
-        /* Grid de Secciones */
         .container { max-width: 1100px; margin: auto; padding: 60px 20px; }
 
-        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        /* SECCIÓN DE PLANES */
+        .plans-title { text-align: center; margin-bottom: 50px; }
+        .plans-title h2 { font-size: 2.8rem; font-weight: 800; margin-bottom: 10px; }
 
-        .card {
+        .pricing-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); 
+            gap: 30px; 
+        }
+
+        .plan-card {
             background: var(--card-bg);
-            padding: 40px;
-            border-radius: 24px;
+            padding: 45px;
+            border-radius: 35px;
             border: 1px solid rgba(255,255,255,0.05);
             transition: 0.3s;
+            display: flex;
+            flex-direction: column;
         }
-        .card:hover { border-color: var(--primary); transform: translateY(-5px); }
-        .card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.6rem; }
 
-        /* SECCIÓN BOMBA: HOSTING GRATIS */
-        .free-hosting-box {
-            background: linear-gradient(135deg, #1e293b, #0f172a);
-            border: 2px solid var(--accent);
-            padding: 50px;
-            border-radius: 30px;
-            margin: 80px 0;
-            text-align: center;
+        .plan-card.featured {
+            border: 2px solid var(--primary);
+            box-shadow: 0 0 40px rgba(34, 211, 238, 0.1);
+            position: relative;
         }
-        .free-hosting-box h2 { color: var(--accent); font-size: 2.5rem; margin-bottom: 20px; }
-        .save-badge { background: #064e3b; color: #34d399; padding: 5px 15px; border-radius: 10px; font-weight: 800; }
 
-        /* Botón Acción */
-        .btn-cta {
+        .featured-tag {
+            position: absolute; top: -15px; right: 30px;
+            background: var(--primary); color: var(--bg);
+            padding: 6px 18px; border-radius: 50px;
+            font-size: 0.8rem; font-weight: 800;
+        }
+
+        .plan-card h3 { font-size: 1.8rem; color: var(--primary); margin-bottom: 15px; }
+        .plan-card .price-detail { font-size: 1.1rem; margin-bottom: 30px; color: #94a3b8; }
+        .plan-card .price-detail strong { font-size: 2rem; color: white; }
+
+        .plan-list { list-style: none; margin-bottom: 40px; flex-grow: 1; }
+        .plan-list li { margin-bottom: 15px; display: flex; gap: 12px; font-size: 1.05rem; }
+        .plan-list li::before { content: "✓"; color: var(--accent); font-weight: bold; }
+
+        .btn-plan {
             background: var(--primary);
             color: var(--bg);
-            padding: 20px 45px;
+            padding: 18px;
             border-radius: 15px;
-            font-weight: 800;
             text-decoration: none;
-            font-size: 1.3rem;
-            display: inline-block;
-            margin-top: 20px;
-            box-shadow: 0 10px 25px rgba(34, 211, 238, 0.2);
+            text-align: center;
+            font-weight: 800;
+            font-size: 1.1rem;
             transition: 0.3s;
         }
-        .btn-cta:hover { transform: scale(1.05); box-shadow: 0 15px 35px rgba(34, 211, 238, 0.4); }
+        .btn-plan:hover { transform: scale(1.03); filter: brightness(1.1); }
 
-        footer { text-align: center; padding: 60px; color: #475569; font-size: 0.95rem; border-top: 1px solid rgba(255,255,255,0.05); }
+        /* Sección confianza */
+        .trust-box {
+            background: rgba(255,255,255,0.02);
+            padding: 40px;
+            border-radius: 30px;
+            margin-top: 60px;
+            border: 1px dashed rgba(255,255,255,0.1);
+        }
+
+        footer { text-align: center; padding: 80px 20px; color: #475569; font-size: 1rem; border-top: 1px solid rgba(255,255,255,0.05); }
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.8rem; }
-            .free-hosting-box { padding: 30px; }
-            .free-hosting-box h2 { font-size: 1.8rem; }
+            .pricing-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <a href="https://wa.me/34647750252?text=Hola%20Aiden,%20quiero%20la%20web%20con%20hosting%20gratis" class="floating-wa" target="_blank">💬</a>
+    <a href="https://wa.me/34647750252?text=Hola Aiden, me gustaría hablar sobre las opciones de mi nueva web" class="floating-wa" target="_blank">💬</a>
 
     <header class="hero">
         <h1>Tu negocio online <br><span>en 48 horas.</span></h1>
-        <div class="price-hero">200€</div>
-        <p style="color: #94a3b8; font-size: 1.3rem; max-width: 650px; margin: 0 auto 40px;">
-            Diseño web profesional, ultra-rápido y optimizado para Google. Sin cuotas mensuales y sin letra pequeña.
+        <div class="price-hero">Pago Único: 200€</div>
+        <p style="color: #94a3b8; font-size: 1.3rem; max-width: 700px; margin: 0 auto 40px;">
+            Diseño profesional adaptado a móviles, optimizado para Google y con botón de WhatsApp directo. Tú eliges dónde alojarlo.
         </p>
-        <a href="https://wa.me/34647750252?text=Hola%20Aiden,%20quiero%20la%20web%20con%20hosting%20gratis" class="btn-cta">
-            🚀 QUIERO EMPEZAR YA
+        <a href="https://wa.me/34647750252?text=Hola Aiden, quiero empezar mi web por 200€" class="btn-plan" style="display: inline-block; padding: 20px 50px;">
+            🚀 EMPEZAR PROYECTO
         </a>
-        <p style="margin-top: 20px; font-size: 0.9rem; color: #475569;">✓ Garantía: Si no te gusta el diseño, no pagas nada.</p>
     </header>
 
     <div class="container">
         
-        <div class="card-grid">
-            <div class="card">
-                <h3>Ventas 24/7</h3>
-                <p>Tu escaparate abierto al mundo. Recibe consultas de clientes incluso cuando tu tienda esté cerrada.</p>
+        <div class="plans-title">
+            <h2>Elige tu Infraestructura</h2>
+            <p style="color: #64748b;">Diferentes opciones según las necesidades de tu empresa.</p>
+        </div>
+
+        <div class="pricing-grid">
+            <div class="plan-card featured">
+                <div class="featured-tag">EL MÁS BUSCADO</div>
+                <h3>Plan Profesional</h3>
+                <div class="price-detail">
+                    <strong>5-10€</strong> / mes<br>
+                    <span>(1er Mes de Hosting GRATIS)</span>
+                </div>
+                <ul class="plan-list">
+                    <li><strong>Dominio Propio (.com / .es)</strong></li>
+                    <li>Correo Corporativo (info@tuempresa.com)</li>
+                    <li>Servidores de alta velocidad dedicados</li>
+                    <li>Certificado de Seguridad SSL Pro</li>
+                    <li>Propiedad total (tú pagas al proveedor)</li>
+                </ul>
+                <a href="https://wa.me/34647750252?text=Hola Aiden, me interesa el Plan Pro con hosting de pago" class="btn-plan">ELEGIR PLAN PRO</a>
             </div>
-            <div class="card">
-                <h3>Google Local</h3>
-                <p>Aparece en Google Maps cuando alguien busque tus servicios en tu zona. Visibilidad total.</p>
-            </div>
-            <div class="card">
-                <h3>Propiedad Total</h3>
-                <p>Tú eres el dueño legal de tu web. Olvídate de agencias que "secuestran" tu dominio.</p>
+
+            <div class="plan-card">
+                <h3>Plan Eco-Cloud</h3>
+                <div class="price-detail">
+                    <strong>0€</strong> / mes para siempre<br>
+                    <span>(Sin gastos de mantenimiento)</span>
+                </div>
+                <ul class="plan-list">
+                    <li>Alojamiento en Servidores Cloud</li>
+                    <li>Seguridad SSL Incluida</li>
+                    <li>Ideal para webs informativas</li>
+                    <li>Sin cuotas ni facturas mensuales</li>
+                    <li>Opción de subdominio gratuito</li>
+                </ul>
+                <a href="https://wa.me/34647750252?text=Hola Aiden, me interesa el Plan Eco sin cuotas mensuales" class="btn-plan" style="background: rgba(255,255,255,0.1); color: white;">ELEGIR PLAN ECO</a>
             </div>
         </div>
 
-        <div class="free-hosting-box">
-            <span class="save-badge">Ahorro de +240€/año</span>
-            <h2>🎁 Opción: Hosting GRATIS para siempre</h2>
-            <p style="font-size: 1.2rem; margin: 20px 0; color: #cbd5e1;">
-                Uso tecnología de última generación para alojar tu web en servidores de alto rendimiento <strong>sin que tengas que pagar una cuota mensual.</strong>
-            </p>
-            <p style="font-size: 1rem; color: #94a3b8;">
-                Mientras otras agencias te cobran 20€/mes solo por "mantenimiento", conmigo tu único gasto será tu dominio (aprox. 1€ al mes).
-            </p>
-        </div>
-
-        <div style="text-align: center; background: rgba(34, 211, 238, 0.03); padding: 60px; border-radius: 30px;">
-            <h2 style="margin-bottom: 30px;">¿Cómo es el proceso?</h2>
-            <div style="text-align: left; max-width: 600px; margin: auto;">
-                <p style="margin-bottom: 20px;">✅ <strong>Paso 1:</strong> Hablamos 15 min por WhatsApp (sin llamadas).</p>
-                <p style="margin-bottom: 20px;">✅ <strong>Paso 2:</strong> Me pasas tu logo e info y diseño tu web en 48h.</p>
-                <p style="margin-bottom: 20px;">✅ <strong>Paso 3:</strong> Si te encanta, pagas los 200€ y lanzamos.</p>
-            </div>
-            <a href="https://wa.me/34647750252?text=Hola%20Aiden,%20quiero%20la%20web%20con%20hosting%20gratis" class="btn-cta">
-                💬 CONTACTAR POR CHAT
-            </a>
+        <div class="trust-box">
+            <h3 style="margin-bottom: 20px; color: var(--primary);">🛡️ ¿Cómo trabajo?</h3>
+            <p style="margin-bottom: 15px;">1. Hablamos <strong>15 min por chat</strong> para conocer tu negocio. Nada de llamadas largas.</p>
+            <p style="margin-bottom: 15px;">2. Diseño tu web en <strong>48 horas</strong> y te mando un enlace para que la revises.</p>
+            <p>3. Si te encanta el resultado, realizas el pago y <strong>ponemos tu negocio a vender</strong> al mundo.</p>
         </div>
 
     </div>
 
     <footer>
-        <p>Aiden Portillo — Desarrollador de Estrategias Digitales para Negocios Reales</p>
-        <p>© 2026 — Soporte técnico incluido en el primer mes.</p>
+        <p>Aiden Portillo — Desarrollador de Soluciones Digitales</p>
+        <p>© 2026 — Transparencia, Calidad y Resultados.</p>
     </footer>
 
 </body>
