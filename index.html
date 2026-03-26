@@ -3,177 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aiden Portillo | Tu Negocio en Internet Hoy</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Aiden Portillo | Tu Web Profesional en 48h</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #0062ff;
             --secondary: #00d2ff;
             --dark: #0f172a;
-            --accent: #25d366; 
+            --accent: #25d366; /* Color WhatsApp */
             --light: #f8fafc;
             --danger: #ef4444;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
+        /* Ajuste GLOBAL de fuente: Término medio cómodo (1.15rem, era 1.3rem) */
         body { 
             font-family: 'Inter', sans-serif; 
             line-height: 1.5; 
             color: var(--dark); 
             background: white; 
-            font-size: 1.3rem; /* Fuente base muy grande */
+            font-size: 1.15rem; /* Un poco más grande, pero no excesivo */
         }
 
-        /* Hero Section IMPACTANTE */
+        /* Hero Section Refinada (Estructura de imagen_13.png, textos refinados) */
         .hero {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
-            padding: 160px 20px;
+            padding: 100px 20px; /* Más moderado, no tan profundo */
             text-align: center;
             clip-path: polygon(0 0, 100% 0, 100% 92%, 0% 100%);
         }
 
+        /* Contenedor de texto para jerarquía visual de imagen_13.png */
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
         .hero h1 { 
-            font-size: 5.5rem; 
+            font-size: 3.8rem; /* Grande, pero no ENORME como antes */
             font-weight: 900; 
-            letter-spacing: -3px; 
-            margin-bottom: 30px; 
-            line-height: 1;
-            text-transform: uppercase;
+            letter-spacing: -2px; 
+            margin-bottom: 25px; 
+            line-height: 1.1;
         }
 
         .hero p { 
-            font-size: 1.8rem; 
+            font-size: 1.4rem; /* Más grande, pero no exagerado */
             opacity: 0.95; 
-            max-width: 900px; 
-            margin: 0 auto 40px; 
+            margin-bottom: 30px; 
             font-weight: 400;
         }
 
-        /* Precio y Urgencia */
-        .price-container { margin-bottom: 40px; }
+        /* Precio y Urgencia moderados */
+        .price-container { margin-bottom: 30px; }
         .price-tag {
             background: var(--danger);
             display: inline-block;
-            padding: 20px 45px;
-            border-radius: 100px;
+            padding: 15px 35px; /* Más moderado */
+            border-radius: 80px;
             font-weight: 900;
-            font-size: 2.5rem;
-            box-shadow: 0 20px 40px rgba(239, 68, 68, 0.4);
-            transform: rotate(-2deg);
+            font-size: 2rem; /* Más moderado */
+            box-shadow: 0 15px 30px rgba(239, 68, 68, 0.3);
         }
 
         .urgency {
             display: block;
-            margin-top: 20px;
+            margin-top: 15px;
             font-weight: 700;
             color: #ffde00;
-            font-size: 1.4rem;
+            font-size: 1.2rem; /* Un poco más grande para leer mejor */
             text-transform: uppercase;
         }
 
-        /* Secciones */
-        .container { max-width: 1200px; margin: auto; padding: 100px 25px; }
-        
-        h2 { font-size: 3.5rem; font-weight: 900; text-align: center; margin-bottom: 60px; letter-spacing: -1px; }
+        /* Garantía moderada */
+        .guarantee {
+            font-size: 1.1rem;
+            color: #ffcccc;
+            margin-bottom: 35px;
+        }
 
-        /* Tarjetas de Beneficios */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
+        /* Botón moderado */
+        .btn-large {
+            background: var(--accent);
+            color: white;
+            padding: 20px 45px; /* Más moderado */
+            border-radius: 18px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.5rem; /* Más moderado */
+            display: inline-block;
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
+            transition: 0.3s;
+        }
+        .btn-large:hover { transform: translateY(-5px); filter: brightness(1.1); }
+
+        /* Contenedor general moderado */
+        .container { max-width: 1200px; margin: auto; padding: 80px 25px; } /* Más moderado */
+        
+        h2 { font-size: 2.8rem; font-weight: 900; text-align: center; margin-bottom: 50px; letter-spacing: -1.5px; } /* Títulos de sección más pequeños */
+
+        /* Grid general moderado */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; } /* Un poco más estrecho y menos gap */
+        
         .card {
             background: white;
-            padding: 60px 40px;
-            border-radius: 30px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 20px 45px rgba(0,0,0,0.05);
             border: 1px solid #f1f5f9;
             transition: 0.3s;
         }
-        .card:hover { transform: translateY(-15px); border-color: var(--primary); }
-        .card h3 { font-size: 2rem; margin-bottom: 20px; color: var(--primary); font-weight: 800; }
+        .card:hover { transform: translateY(-10px); border-color: var(--primary); }
+        .card h3 { font-size: 1.6rem; margin-bottom: 15px; color: var(--primary); font-weight: 800; } /* Títulos de tarjeta más pequeños */
 
-        /* Tabla Comparativa */
-        .compare-box {
-            background: var(--dark);
-            color: white;
-            padding: 80px 40px;
-            border-radius: 40px;
-            margin: 100px 0;
+        /* Checklist moderado */
+        .checklist-box {
+            background: var(--light);
+            padding: 50px 30px;
+            border-radius: 30px;
+            margin: 70px 0;
+            border: 2px solid var(--primary);
         }
-        .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
-        .compare-item { padding: 30px; border-radius: 20px; background: rgba(255,255,255,0.05); }
-        .compare-item.highlight { background: var(--primary); }
-        .compare-item h4 { font-size: 1.8rem; margin-bottom: 15px; }
-        .compare-item ul { list-style: none; }
-        .compare-item li { margin-bottom: 10px; font-size: 1.2rem; }
+        .checklist-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin-top: 25px; }
+        .check-item { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.25rem; } /* Más pequeño */
+        .check-icon { color: var(--accent); font-size: 1.8rem; }
 
-        /* Pasos (Timeline) */
-        .steps { background: var(--light); padding: 100px 20px; border-radius: 40px; }
-        .step-item { 
-            background: white; 
-            padding: 40px; 
-            border-radius: 25px; 
-            margin-bottom: 30px; 
-            display: flex; 
-            align-items: center;
-            gap: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-        }
-        .step-num { 
-            background: var(--primary); 
-            color: white; 
-            width: 80px; 
-            height: 80px; 
-            border-radius: 50%; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            font-size: 2rem; 
-            font-weight: 900;
-            flex-shrink: 0;
-        }
+        /* Pasos (Timeline) moderados */
+        .steps-box { margin: 80px 0; }
+        .step { display: flex; gap: 25px; margin-bottom: 35px; align-items: flex-start; }
+        .step-n { background: var(--dark); color: white; width: 55px; height: 55px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 900; flex-shrink: 0; font-size: 1.5rem;}
+        .step h4 { font-size: 1.4rem; margin-bottom: 8px; font-weight: 700;}
+        .step p { font-size: 1.1rem;}
 
-        /* Hosting y FAQ */
-        .info-block { margin-top: 80px; padding: 50px; border-radius: 30px; border: 2px dashed #cbd5e1; }
+        /* Propiedad Total moderado */
+        .info-block { background: var(--dark); color: white; padding: 50px; border-radius: 30px; text-align: center;}
+        .info-block h2 { color: white; margin-bottom: 30px;}
+        .info-block p { font-size: 1.25rem;}
 
-        /* Botón WhatsApp */
-        .btn-wa {
-            background: var(--accent);
-            color: white;
-            padding: 25px 60px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-weight: 900;
-            font-size: 1.6rem;
-            display: inline-block;
-            box-shadow: 0 20px 40px rgba(37, 211, 102, 0.3);
-            transition: 0.3s;
-        }
-        .btn-wa:hover { transform: scale(1.05); filter: brightness(1.1); }
+        footer { text-align: center; padding: 60px 20px; color: #64748b; border-top: 1px solid #f1f5f9; margin-top: 60px; font-size: 1rem;}
 
-        footer { text-align: center; padding: 80px 20px; color: #64748b; border-top: 1px solid #f1f5f9; }
-
-        /* Responsive */
+        /* Responsive moderado */
         @media (max-width: 900px) {
-            .hero h1 { font-size: 3rem; }
-            .hero p { font-size: 1.3rem; }
-            .compare-grid { grid-template-columns: 1fr; }
-            .step-item { flex-direction: column; text-align: center; }
+            .hero h1 { font-size: 2.8rem; }
+            .hero p { font-size: 1.2rem; }
+            .hero-content { padding: 0 10px; }
+            h2 { font-size: 2.2rem; }
+            .price-tag { font-size: 1.8rem; }
+            .btn-large { font-size: 1.3rem; }
+            .check-item { font-size: 1.1rem; }
+            .step { flex-direction: column; text-align: center; gap: 15px;}
+            .step-n { margin: 0 auto;}
         }
     </style>
 </head>
 <body>
 
     <section class="hero">
-        <div class="price-container">
-            <div class="price-tag">OFERTA: 200€</div>
-            <span class="urgency">⚠️ Quedan 2 plazas este mes</span>
+        <div class="hero-content">
+            <div class="price-container">
+                <div class="price-tag">OFERTA: 200€</div>
+                <span class="urgency">⚠️ Quedan 2 plazas este mes</span>
+            </div>
+            <h1>Tu negocio online en 48 horas</h1>
+            <p>Diseño webs profesionales para comercios locales que convierten visitas en clientes. Sin complicaciones y 100% por chat.</p>
+            <div class="guarantee">🛡️ Garantía total: Si no te gusta el diseño final, no pagas nada. El riesgo es mío.</div>
+            <a href="https://wa.me/34647750252?text=Hola%20Aiden,%20quiero%20aprovechar%20la%20oferta%20de%20200€" class="btn-large">
+                🚀 EMPEZAR AHORA POR WHATSAPP
+            </a>
         </div>
-        <h1>Tu negocio online en 48 horas</h1>
-        <p>Diseño webs de alto impacto que convierten visitas en clientes. Sin complicaciones, sin esperas y sin precios inflados.</p>
-        <a href="https://wa.me/34647750252?text=Hola%20Aiden,%20he%20visto%20tu%20web%20y%20quiero%20aprovechar%20la%20oferta%20de%20200€" class="btn-wa" target="_blank">
-            🚀 EMPEZAR AHORA POR WHATSAPP
-        </a>
-        <p style="margin-top: 30px; font-size: 1.1rem; opacity: 0.8;">Garantía total: Si no te gusta el diseño, no pagas nada.</p>
     </section>
 
     <div class="container">
@@ -181,85 +180,66 @@
         <h2>¿Por qué tu negocio necesita esto?</h2>
         <div class="grid">
             <div class="card">
-                <h3>Ventas en Automático</h3>
-                <p>Tu negocio estará abierto las 24 horas del día. Deja que tus clientes te encuentren y te contacten incluso mientras duermes.</p>
+                <h3>Ventas 24/7</h3>
+                <p>Tu escaparate abierto al mundo las 24 horas del día. Recibe contactos y pedidos incluso cuando tu tienda física esté cerrada.</p>
             </div>
             <div class="card">
-                <h3>Google es el nuevo escaparate</h3>
-                <p>Si no estás en Google, no existes. Te posiciono para que los vecinos de tu zona te encuentren antes que a nadie.</p>
+                <h3>Google Local</h3>
+                <p>Configuro tu ficha para que aparezcas en el mapa cuando alguien busque lo que tú vendes en tu zona. Visibilidad total.</p>
             </div>
             <div class="card">
-                <h3>Confianza Instantánea</h3>
-                <p>Una web moderna y profesional le dice al cliente que eres serio y de confianza. La primera impresión lo es todo.</p>
+                <h3>Velocidad Rayo</h3>
+                <p>Webs ultra rápidas y adaptadas 100% a teléfonos móviles. Transmite confianza y profesionalidad desde el primer segundo.</p>
             </div>
         </div>
 
-        <div class="compare-box">
-            <h2>Mi diferencia</h2>
-            <div class="compare-grid">
-                <div class="compare-item">
-                    <h4>Agencias Normales</h4>
-                    <ul>
-                        <li>❌ Presupuestos de +1.000€</li>
-                        <li>❌ Entrega en 30-60 días</li>
-                        <li>❌ Facturas de mantenimiento altas</li>
-                        <li>❌ Reuniones largas y aburridas</li>
-                    </ul>
-                </div>
-                <div class="compare-item highlight">
-                    <h4>Con Aiden Portillo</h4>
-                    <ul>
-                        <li>✅ Solo 200€ (Pago único)</li>
-                        <li>✅ Entrega en 48 Horas</li>
-                        <li>✅ 100% Gestión por Chat (Sin llamadas)</li>
-                        <li>✅ Tú eres el dueño total de la web</li>
-                    </ul>
-                </div>
+        <div class="checklist-box">
+            <h2 style="margin-bottom: 20px; text-align: left; font-size: 2.5rem;">Tu Pack Web incluye:</h2>
+            <div class="checklist-grid">
+                <div class="check-item"><span class="check-icon">✓</span> Diseño 100% Móvil</div>
+                <div class="check-item"><span class="check-icon">✓</span> Botón WhatsApp Directo</div>
+                <div class="check-item"><span class="check-icon">✓</span> Hosting 1er Mes Gratis</div>
+                <div class="check-item"><span class="check-icon">✓</span> Certificado Seguro SSL</div>
+                <div class="check-item"><span class="check-icon">✓</span> Configuración Google Local</div>
+                <div class="check-item"><span class="check-icon">✓</span> Soporte Post-Venta</div>
             </div>
         </div>
 
-        <section class="steps">
-            <h2>3 Pasos para el éxito</h2>
-            <div class="step-item">
-                <div class="step-num">1</div>
+        <div class="steps-box">
+            <h2>Proceso sin estrés (100% Chat)</h2>
+            <div class="step">
+                <div class="step-n">1</div>
                 <div>
-                    <h4>Hablamos 15 min por Chat</h4>
-                    <p>Me cuentas qué haces y qué necesitas. Sin llamadas, sin perder tiempo. Todo por WhatsApp.</p>
+                    <h4>Hablamos 15 min por WhatsApp</h4>
+                    <p>Me pasas tu logo, fotos y lo que haces por chat. Sin llamadas ni reuniones eternas.</p>
                 </div>
             </div>
-            <div class="step-item">
-                <div class="step-num">2</div>
+            <div class="step">
+                <div class="step-n">2</div>
                 <div>
                     <h4>Diseño y Montaje</h4>
-                    <p>Me pongo manos a la obra y en 48 horas tienes tu web lista para revisar.</p>
+                    <p>En 48 horas te envío un borrador de tu web para que me des el visto bueno.</p>
                 </div>
             </div>
-            <div class="step-item">
-                <div class="step-num">3</div>
+            <div class="step">
+                <div class="step-n">3</div>
                 <div>
                     <h4>¡Al Aire!</h4>
                     <p>Si te encanta el resultado, activamos el dominio y empiezas a recibir clientes.</p>
                 </div>
             </div>
-        </section>
-
-        <div class="info-block">
-            <h3>Sobre el mantenimiento</h3>
-            <p><strong>Cero trampas:</strong> Yo te regalo el primer mes de alojamiento profesional. A partir del segundo mes, tú pagas el servidor (aprox. 5-10€/mes) directamente al proveedor para que la web sea 100% tuya y no dependas de nadie.</p>
         </div>
 
-        <div style="text-align: center; margin-top: 80px;">
-            <h2>¿Listo para dar el salto?</h2>
-            <a href="https://wa.me/34647750252?text=Hola%20Aiden,%20he%20visto%20tu%20web%20y%20quiero%20aprovechar%20la%20oferta%20de%20200€" class="btn-wa" target="_blank">
-                💬 SÍ, QUIERO MI WEB POR 200€
-            </a>
+        <div class="info-block">
+            <h2>Propiedad Total</h2>
+            <p><strong>Cero trampas:</strong> Yo gestiono todo y te regalo el primer mes. A partir del segundo, tú pagas el servidor (aprox. 5-10€/mes) directamente al proveedor. La web es 100% tuya y no dependes de nadie.</p>
         </div>
 
     </div>
 
     <footer>
-        <p>Aiden Portillo — Especialista en Digitalización de Negocios Locales</p>
-        <p>© 2026 — Soporte y Calidad Garantizada</p>
+        <p>Aiden Portillo — Especialista en Digitalización de Comercios Locales</p>
+        <p>Recuerda: Solo acepto 3 proyectos nuevos al mes para garantizar la máxima calidad.</p>
     </footer>
 
 </body>
