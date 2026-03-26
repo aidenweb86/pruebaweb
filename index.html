@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aiden Portillo | Impulsa tu Negocio Local</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #0062ff;
@@ -15,102 +15,126 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--dark); background: white; }
+        
+        /* Aumento GLOBAL de fuente de 1.2rem (era 1rem) */
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--dark); background: white; font-size: 1.2rem; }
 
-        /* Hero Section */
+        /* Hero Section GRANDE */
         .hero {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
-            padding: 100px 20px;
+            padding: 140px 30px; /* Más relleno */
             text-align: center;
             clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
         }
 
-        .hero h1 { font-size: 3.5rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 20px; }
-        .hero p { font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto 30px; }
+        .hero h1 { font-size: 5rem; font-weight: 800; letter-spacing: -2px; margin-bottom: 30px; line-height: 1.1; } /* Título ENORME */
+        .hero p { font-size: 1.6rem; opacity: 0.95; max-width: 800px; margin: 0 auto 40px; } /* Párrafo más grande */
 
-        /* Pricing Badge */
+        /* Etiqueta de Precio GRANDE */
         .price-tag {
             background: #e63946;
             display: inline-block;
-            padding: 10px 25px;
-            border-radius: 50px;
+            padding: 15px 35px; /* Más relleno */
+            border-radius: 60px;
             font-weight: bold;
-            font-size: 1.5rem;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
+            font-size: 2rem; /* Precio más grande */
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            margin-bottom: 30px;
         }
 
-        /* Grid general */
-        .container { max-width: 1100px; margin: auto; padding: 60px 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        /* Garantía de Venta */
+        .guarantee {
+            font-size: 1.1rem;
+            color: #ffcccc;
+            margin-top: -20px;
+            margin-bottom: 40px;
+        }
+
+        /* Grid general GRANDE */
+        .container { max-width: 1300px; margin: auto; padding: 100px 30px; } /* Más ancho y relleno */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; } /* Tarjetas más anchas */
 
         .card {
             background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            padding: 50px; /* Más relleno */
+            border-radius: 25px;
+            box-shadow: 0 20px 45px rgba(0,0,0,0.08);
             border: 1px solid #eee;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-        .card:hover { transform: translateY(-10px); }
-        .card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.4rem; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.12); }
+        .card h3 { color: var(--primary); margin-bottom: 20px; font-size: 1.8rem; font-weight: 800; } /* Título de tarjeta más grande */
+        .card p { font-size: 1.25rem; }
 
-        /* NUEVA SECCIÓN: CÓMO FUNCIONA (Timeline) */
+        /* Cómo Funciona (Timeline) GRANDE */
         .how-it-works {
             background: var(--light);
-            border-radius: 20px;
-            padding: 50px;
-            margin-top: 50px;
+            border-radius: 30px;
+            padding: 80px 50px; /* Más relleno */
+            margin-top: 80px;
         }
-        .how-it-works h2 { text-align: center; color: var(--primary); font-weight: 800; margin-bottom: 40px; }
+        .how-it-works h2 { text-align: center; color: var(--primary); font-weight: 800; margin-bottom: 60px; font-size: 2.8rem; }
         
         .timeline-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            gap: 30px;
             text-align: center;
         }
-        .timeline-item { padding: 20px; }
+        .timeline-item { padding: 30px; background: white; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.03); }
         .timeline-icon {
-            font-size: 3rem;
+            font-size: 4.5rem; /* Iconos más grandes */
             color: var(--secondary);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
-        .timeline-item h4 { font-weight: 700; margin-bottom: 10px; }
-        .timeline-item p { font-size: 0.95rem; color: #555; }
+        .timeline-item h4 { font-weight: 700; margin-bottom: 15px; font-size: 1.6rem; }
+        .timeline-item p { font-size: 1.15rem; color: #555; }
 
-        /* Hosting Section */
+        /* NUEVA SECCIÓN: FAQ Corta */
+        .faq-section { margin-top: 80px; }
+        .faq-section h2 { text-align: center; color: var(--dark); font-weight: 800; margin-bottom: 50px; font-size: 2.5rem; }
+        .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .faq-item { background: white; padding: 30px; border-radius: 20px; border: 1px solid #eee; }
+        .faq-item h5 { font-weight: 700; margin-bottom: 10px; font-size: 1.2rem; color: var(--primary); }
+        .faq-item p { font-size: 1.1rem; color: #666; }
+
+        /* Hosting Section GRANDE */
         .hosting-info {
             background: white;
-            padding: 40px;
-            border-radius: 20px;
-            margin-top: 40px;
-            border-left: 5px solid var(--primary);
+            padding: 60px; /* Más relleno */
+            border-radius: 25px;
+            margin-top: 60px;
+            border-left: 10px solid var(--primary); /* Borde más grueso */
             border: 1px solid #eee;
+            font-size: 1.25rem;
         }
+        .hosting-info h3 { font-size: 1.8rem; margin-bottom: 20px; }
 
-        /* Buttons */
+        /* Botones GRANDES */
         .btn {
             display: inline-block;
             background: var(--dark);
             color: white;
-            padding: 18px 35px;
-            border-radius: 12px;
+            padding: 22px 50px; /* Más relleno */
+            border-radius: 15px;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1.3rem; /* Botón más grande */
             transition: all 0.3s;
-            margin: 10px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin: 15px;
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
         }
         .btn-whatsapp { background: var(--accent); }
         .btn:hover { opacity: 0.9; transform: scale(1.05); }
 
-        footer { text-align: center; padding: 40px; color: #888; font-size: 0.9rem; }
+        footer { text-align: center; padding: 60px; color: #888; font-size: 1.1rem; border-top: 1px solid #eee; margin-top: 60px; }
 
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
+        @media (max-width: 900px) {
+            .hero h1 { font-size: 3.2rem; }
             .timeline-grid { grid-template-columns: 1fr; gap: 40px; }
+            .hero p { font-size: 1.3rem; }
+            .price-tag { font-size: 1.6rem; }
         }
     </style>
 </head>
@@ -118,8 +142,9 @@
 
     <section class="hero">
         <h1>Tu negocio merece vender más</h1>
-        <p>Diseño webs profesionales para comercios locales que buscan resultados reales.</p>
+        <p>Diseño webs profesionales y ultra rápidas para comercios locales de Santander que buscan resultados reales.</p>
         <div class="price-tag">Oferta Lanzamiento: 200€</div>
+        <div class="guarantee">Si no te gusta el diseño final, no pagas nada.</div>
         <br>
         <a href="https://wa.me/34647750252?text=Hola%20Aiden,%20he%20visto%20tu%20web%20y%20me%20gustaría%20información%20sobre%20la%20oferta%20de%20200€" 
            class="btn btn-whatsapp" 
@@ -132,49 +157,64 @@
         <div class="grid">
             <div class="card">
                 <h3>Ventas 24/7</h3>
-                <p>Tu negocio nunca cierra. Muestra tus productos y servicios a cualquier hora del día.</p>
+                <p>Tu negocio nunca cierra. Muestra tus productos y servicios a cualquier hora del día, captando clientes mientras duermes.</p>
             </div>
             <div class="card">
                 <h3>Google Maps & SEO</h3>
-                <p>Aparece cuando los clientes busquen lo que tú vendes en tu zona. Visibilidad total.</p>
+                <p>Aparece cuando los clientes busquen lo que tú vendes en tu zona. Visibilidad total para que te encuentren antes que a la competencia.</p>
             </div>
             <div class="card">
                 <h3>Diseño Premium</h3>
-                <p>Webs ultra rápidas, modernas y adaptadas 100% a teléfonos móviles.</p>
+                <p>Webs ultra rápidas, modernas y adaptadas 100% a teléfonos móviles. Transmite confianza y profesionalidad desde el primer segundo.</p>
             </div>
         </div>
 
         <div class="how-it-works">
-            <h2>✅ ¿Cómo funciona? Tu web en 3 pasos simples</h2>
+            <h2>✅ Tu web en 3 pasos simples (No te quitará tiempo)</h2>
             <div class="timeline-grid">
                 <div class="timeline-item">
                     <div class="timeline-icon">🤝</div>
                     <h4>1. Reunión Rápida</h4>
-                    <p>Hablamos 15 min (café o videollamada) para entender tu negocio y lo que necesitas.</p>
+                    <p>Hablamos 15 min (solo por chat) para entender tu negocio y lo que necesitas. Sin llamadas molestas.</p>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-icon">🚀</div>
                     <h4>2. Diseño y Desarrollo</h4>
-                    <p>Creo tu web profesional, rápida y optimizada para Google, lista en tiempo récord.</p>
+                    <p>Creo tu web profesional y optimizada para Google, lista en tiempo récord (48h).</p>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-icon">👍</div>
-                    <h4>3. Lanzamiento y Pago</h4>
-                    <p>Revisas la web. Si te gusta, hacemos el pago y la publicamos al mundo. ¡Sin letra pequeña!</p>
+                    <h4>3. Lanzamiento</h4>
+                    <p>Revisas la web. Si estás 100% satisfecho, hacemos el pago y la publicamos al mundo.</p>
                 </div>
             </div>
         </div>
 
         <div class="hosting-info">
             <h3>Sobre el mantenimiento y alojamiento</h3>
-            <p>Para que tu web esté siempre online, trabajo con servidores de alta velocidad. <strong>Yo gestiono todo y te regalo el primer mes de hosting.</strong></p>
-            <p style="margin-top: 10px; font-size: 0.9rem; color: #555;">*A partir del segundo mes, el coste del servidor corre por cuenta de tu empresa (pago directo al proveedor), asegurando que tú seas el dueño legal de tu sitio.</p>
+            <p>Para que tu web esté siempre online, trabajo con servidores de alta velocidad. <strong>Yo gestiono todo el aspecto técnico y te regalo el primer mes de hosting.</strong></p>
+            <p style="margin-top: 15px; font-size: 1rem; color: #666;">*A partir del segundo mes, el coste del servidor corre por cuenta de tu empresa (pago directo al proveedor), asegurando que tú seas el dueño legal de tu sitio.</p>
         </div>
+
+        <div class="faq-section">
+            <h2>🤔 Preguntas Frecuentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h5>¿Cuándo estará lista mi web?</h5>
+                    <p>En 48h desde que reciba tus textos e imágenes básicas. Trabajo rápido.</p>
+                </div>
+                <div class="faq-item">
+                    <h5>¿Tengo que saber de ordenadores?</h5>
+                    <p>No. Yo me encargo de todo lo técnico. Tú solo tienes que atender a tus nuevos clientes.</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <footer>
-        <p>Aiden Portillo — Desarrollador Web para Negocios Locales</p>
-        <p>© 2026 Santander, España.</p>
+        <p>Aiden Portillo — Desarrollador Web para Negocios Locales en Santander</p>
+        <p>© 2026 Todos los derechos reservados.</p>
     </footer>
 
 </body>
