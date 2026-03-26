@@ -3,68 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aiden Portillo - Desarrollo Web Profesional</title>
-    <meta name="description" content="Páginas web modernas y responsive desde 350€. Hosting gratis 1 año. Contacta ahora Aiden Portillo.">
+    <title>Aiden Portillo | Impulsa tu Negocio Local</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #0062ff;
+            --secondary: #00d2ff;
+            --dark: #1a1a1a;
+            --accent: #28a745;
+            --light: #f8f9fa;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; }
-        .hero { background: linear-gradient(135deg, #007bff, #0056b3); color: white; text-align: center; padding: 80px 20px; }
-        .hero h1 { font-size: 3em; margin-bottom: 10px; }
-        .hero p { font-size: 1.5em; margin-bottom: 30px; }
-        .btn { background: #28a745; color: white; padding: 20px 40px; font-size: 1.3em; text-decoration: none; border-radius: 50px; display: inline-block; margin: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: transform 0.3s; }
-        .btn:hover { transform: scale(1.05); }
-        .services { padding: 60px 20px; max-width: 1200px; margin: auto; }
-        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .service { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; }
-        .service h3 { color: #007bff; font-size: 1.8em; margin-bottom: 15px; }
-        .price { font-size: 2.5em; color: #28a745; font-weight: bold; margin: 20px 0; }
-        .testimonio { background: #f8f9fa; padding: 60px 20px; }
-        .testimonio blockquote { font-style: italic; font-size: 1.3em; text-align: center; max-width: 800px; margin: auto; }
-        .contact { background: #007bff; color: white; text-align: center; padding: 40px 20px; }
-        @media (max-width: 768px) { .hero h1 { font-size: 2em; } .btn { display: block; max-width: 300px; margin: 10px auto; } }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--dark); background: white; }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+
+        .hero h1 { font-size: 3.5rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto 30px; }
+
+        /* Pricing Badge */
+        .price-tag {
+            background: var(--accent);
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.5rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        /* Grid */
+        .container { max-width: 1100px; margin: auto; padding: 60px 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+            transition: transform 0.3s;
+        }
+        .card:hover { transform: translateY(-10px); }
+        .card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.4rem; }
+
+        /* Hosting Section */
+        .hosting-info {
+            background: var(--light);
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 40px;
+            border-left: 5px solid var(--primary);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background: var(--dark);
+            color: white;
+            padding: 18px 35px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            margin: 10px;
+        }
+        .btn-whatsapp { background: #25d366; }
+        .btn:hover { opacity: 0.9; transform: scale(1.05); }
+
+        footer { text-align: center; padding: 40px; color: #888; font-size: 0.9rem; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+        }
     </style>
 </head>
 <body>
+
     <section class="hero">
-        <h1>¡Páginas Web que Venden!</h1>
-        <p>Aiden Portillo - Desarrollo Web Profesional</p>
-        <a href="#contacto" class="btn">Web desde 350€ - ¡Demo Gratis!</a>
-        <a href="tel:+346XXXXXXXX" class="btn">Llamar Ahora</a>
+        <h1>Tu negocio merece vender más</h1>
+        <p>Diseño webs profesionales para comercios que buscan resultados, no solo una imagen bonita.</p>
+        <div class="price-tag">Oferta Lanzamiento: 200€</div>
+        <br>
+        <a href="https://wa.me/TUNUMERO" class="btn btn-whatsapp">Contactar por WhatsApp</a>
     </section>
 
-    <section class="services">
-        <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 20px;">¿Por qué yo?</h2>
-        <div class="service-grid">
-            <div class="service">
-                <h3>🌐 Web Responsive</h3>
-                <p>Perfecta en móvil y PC. Clientes compran más.</p>
-                <div class="price">✅ Incluido</div>
+    <div class="container">
+        <div class="grid">
+            <div class="card">
+                <h3>Ventas 24/7</h3>
+                <p>Tu negocio nunca cierra. Muestra tus productos y servicios a cualquier hora del día.</p>
             </div>
-            <div class="service">
-                <h3>🛒 Tienda Online</h3>
-                <p>Carrito + pagos. Vende 24h sin comisiones altas.</p>
-                <div class="price">✅ Incluido</div>
+            <div class="card">
+                <h3>Google Maps & SEO</h3>
+                <p>Aparece cuando los clientes busquen lo que tú vendes en tu zona. Visibilidad total.</p>
             </div>
-            <div class="service">
-                <h3>⚡ Rápido en 3 días</h3>
-                <p>Demo gratis 48h. Hosting 1 año gratis.</p>
-                <div class="price">350€ Total</div>
+            <div class="card">
+                <h3>Diseño Premium</h3>
+                <p>Webs rápidas, modernas y adaptadas 100% a teléfonos móviles.</p>
             </div>
         </div>
-    </section>
 
-    <section class="testimonio">
-        <blockquote>
-            "Aiden me hizo web en 3 días. Ventas +40% primer mes. ¡Muy pro!"
-            <br><strong>- Cliente local</strong>
-        </blockquote>
-    </section>
+        <div class="hosting-info">
+            <h3>Sobre el mantenimiento y alojamiento</h3>
+            <p>Para que tu web esté siempre online, trabajo con los mejores servidores. <strong>Yo te regalo el primer mes de gestión y hosting.</strong></p>
+            <p style="margin-top: 10px; font-size: 0.9rem; color: #555;">*A partir del segundo mes, el coste del servidor corre por cuenta de tu empresa (aprox. 5-10€/mes), asegurando que tú seas el dueño total de tu web.</p>
+        </div>
+    </div>
 
-    <section id="contacto" class="contact">
-        <h2>¡Empieza Hoy!</h2>
-        <p>Web personalizada para tu negocio. Sin web = ventas perdidas.</p>
-        <a href="https://wa.me/346XXXXXXXXX?text=Hola%20Aiden,%20quiero%20web" class="btn">WhatsApp Ahora</a>
-        <p style="margin-top: 20px; font-size: 1.1em;">Aiden Portillo | Desarrollador Web | 6XX XXX XXX</p>
-    </section>
+    <footer>
+        <p>Aiden Portillo — Especialista en Digitalización de Comercios</p>
+        <p>© 2026 Todos los derechos reservados.</p>
+    </footer>
+
 </body>
 </html>
